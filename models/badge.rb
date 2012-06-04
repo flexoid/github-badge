@@ -3,7 +3,7 @@ class Badge
 
   property :id,       Serial
   property :user,     String
-  property :image,    Binary, length: 300000
+  property :image,    Text
 
   timestamps :at
 end
