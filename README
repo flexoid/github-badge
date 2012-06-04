@@ -1,0 +1,3 @@
+Simple sinatra application that generates badge image with github followers count.
+
+You can try it here: http://github-badge.heroku.com/
