@@ -1,0 +1,44 @@
+#container {
+  width: 760px;
+  margin: 0 auto;
+}
+
+#container h1, h2 {
+  text-align: center;
+}
+
+#container h1 {
+  margin-bottom: 10px;
+}
+
+#container h2 {
+  margin-top: 10px;
+}
+
+#container #preview_area {
+  width: 80px;
+  height: 80px;
+  margin-left: 340px;
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+
+#container #form {
+  padding: 20px 20px 20px 20px;
+  background: #B3CCE4;
+  border-radius: 15px;
+}
+
+#container #form #user {
+  font-size: 40px;
+  width: 700px;
+  padding: 10px;
+  margin: 10px;
+  border: 0;
+  border-radius: 5px;
+}
+
+#container #link {
+  width: 600px;
+  margin-left: 80px;
+}

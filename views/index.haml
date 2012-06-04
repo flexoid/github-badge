@@ -1,0 +1,36 @@
+%script{:type => "text/javascript",
+        :src  => "javascripts/jquery-min.js"}
+%script{:type => "text/javascript",
+        :src  => "javascripts/onfinishinput.js"}
+%script{:type => "text/javascript",
+        :src  => "javascripts/spin.min.js"}
+
+%link{"rel" => "stylesheet", "href" => "stylesheets/main.css", "type" => "text/css"}
+
+:javascript
+  function load_preview(user) {
+    var spinner = new Spinner();
+    $('#preview').attr("src", null).fadeOut();
+    $('#link').val("").hide();
+    spinner.spin(document.getElementById('preview_area'));
+    $.get(user + '.preview', function(data) {
+      if (data.length > 0) {
+        $('#preview').attr("src", "data:image/png;base64," + data).fadeIn();
+        $('#link').val(location.href + user + ".png").show();
+
+      }
+      spinner.stop();
+    });
+  }
+
+#container
+  %h1 Get Github badge
+  %h2 With followers count
+
+  #preview_area
+    %img{id: "preview", style: "display: none;"}
+
+  #form
+    %input{id: "user", placeholder: "Github username", onfinishinput: "load_preview(input_field.val())"}
+
+  %input{id: "link", style: "display: none;"}

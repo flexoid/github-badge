@@ -7,14 +7,20 @@ require Dir.pwd + '/db/init'
 require Dir.pwd + '/lib/github'
 require Dir.pwd + '/lib/badge_image'
 
+set :haml, :format => :html5
+
+get '/' do
+  haml :index
+end
+
 get '/:user.preview' do
   content_type :json
   info = Github.get_user_info(params[:user])
   content_type 'image/png'
-  BadgeImage.decode_badge(BadgeImage.make_badge(info)) unless info.nil?
+  BadgeImage.make_badge(info) unless info.nil?
 end
 
-get '/:user' do
+get '/:user.png' do
   user = params[:user]
   @badge = Badge.first(user: user)
   if @badge.nil? || @badge.updated_at < 5.minutes.ago
