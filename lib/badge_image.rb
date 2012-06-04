@@ -1,4 +1,6 @@
 require 'RMagick'
+require 'base64'
+require 'zlib'
 
 class BadgeImage
   class << self
@@ -13,7 +15,11 @@ class BadgeImage
       text.font_weight = Magick::BoldWeight
 
       img.annotate(text, 0, 0, 0, 0, "#{info.followers}")
-      img.to_blob
+      Base64.encode64 img.to_blob
+    end
+
+    def decode_badge(encoded_image)
+      Base64.decode64 encoded_image
     end
   end
 end
