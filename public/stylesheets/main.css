@@ -42,3 +42,10 @@
   width: 600px;
   margin-left: 80px;
 }
+
+#fork_me {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+}
