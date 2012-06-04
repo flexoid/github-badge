@@ -4,6 +4,7 @@ require 'sinatra'
 require 'active_support/all'
 
 require Dir.pwd + '/db/init'
+require Dir.pwd + '/models/badge'
 require Dir.pwd + '/lib/github'
 require Dir.pwd + '/lib/badge_image'
 
