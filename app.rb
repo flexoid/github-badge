@@ -15,7 +15,6 @@ get '/' do
 end
 
 get '/:user.preview' do
-  content_type :json
   info = Github.get_user_info(params[:user])
   content_type 'image/png'
   BadgeImage.make_badge(info) unless info.nil?
