@@ -3,6 +3,13 @@ source :rubygems
 gem 'sinatra'
 
 gem 'datamapper'
-gem 'dm-sqlite-adapter'
 gem 'activesupport', :require => 'active_support'
 gem 'rmagick'
+
+group :development do
+  gem 'dm-sqlite-adapter'
+end
+
+group :production do
+  gem 'dm-postgres-adapter'
+end
