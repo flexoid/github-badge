@@ -23,7 +23,7 @@ end
 get '/:user.png' do
   user = params[:user]
   @badge = Badge.first(user: user)
-  if @badge.nil? || @badge.updated_at < 5.minutes.ago
+  if @badge.nil? || @badge.updated_at < 6.hours.ago
     info = Github.get_user_info(user)
     unless info.nil?
       image = BadgeImage.make_badge(info)
