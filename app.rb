@@ -37,3 +37,8 @@ get '/:user.png' do
   content_type 'image/png'
   BadgeImage.decode_badge(@badge.image) if @badge
 end
+
+# SASS stylesheet
+get '/stylesheets/style.css' do
+  scss :style
+end
