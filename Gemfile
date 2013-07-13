@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'sinatra'
 
@@ -7,9 +7,9 @@ gem 'activesupport', :require => 'active_support'
 gem 'rmagick'
 gem 'haml'
 gem 'sass'
+gem 'dm-sqlite-adapter'
 
 group :development do
-  gem 'dm-sqlite-adapter'
   gem 'capistrano-deploy', require: false
 end
 
