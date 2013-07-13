@@ -8,6 +8,7 @@ gem 'rmagick'
 gem 'haml'
 gem 'sass'
 gem 'dm-sqlite-adapter'
+gem 'thin'
 
 group :development do
   gem 'capistrano-deploy', require: false
