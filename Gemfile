@@ -10,6 +10,7 @@ gem 'sass'
 
 group :development do
   gem 'dm-sqlite-adapter'
+  gem 'capistrano-deploy', require: false
 end
 
 group :production do
