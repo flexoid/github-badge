@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/flexoid/Documents/Git/capistrano-deploy
+GIT
+  remote: git://github.com/flexoid/capistrano-deploy.git
+  revision: ce8f3ea616b79daed7d7c4253b3409a7d93d6920
   specs:
     capistrano-deploy (0.3.2)
       capistrano (~> 2.9)
